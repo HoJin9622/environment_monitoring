@@ -1,0 +1,24 @@
+{
+  "name": "environment_monitoring",
+  "version": "1.0.0",
+  "description": "environment monitoring app",
+  "repository": {
+    "url": "https://github.com/HoJin9622/environment_monitoring",
+    "type": "git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client"
+  },
+  "author": "HoJin9622",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
