@@ -19,14 +19,14 @@ function App() {
       <Router>
         <Drawer />
         <Grid container>
-          <Grid xs={0} sm={2} />
-          <Grid xs={12} sm={8}>
+          <Grid item xs={false} sm={2} />
+          <Grid item xs={12} sm={8}>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/dashboard' component={Dashboard} />
             </Switch>
           </Grid>
-          <Grid xs={0} sm={2} />
+          <Grid item xs={false} sm={2} />
         </Grid>
       </Router>
     </div>
