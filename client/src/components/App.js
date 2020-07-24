@@ -4,7 +4,19 @@ import Home from '../routes/Home';
 import Dashboard from '../routes/Dashboard';
 import Drawer from './Drawer';
 import { makeStyles } from '@material-ui/styles';
-import { Grid } from '@material-ui/core';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/images/main.jpg');
+  background-size: cover;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+`;
 
 const useStyles = makeStyles({
   container: {
@@ -18,16 +30,12 @@ function App() {
     <div className={classes.container}>
       <Router>
         <Drawer />
-        <Grid container>
-          <Grid item xs={false} sm={2} />
-          <Grid item xs={12} sm={8}>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/dashboard' component={Dashboard} />
-            </Switch>
-          </Grid>
-          <Grid item xs={false} sm={2} />
-        </Grid>
+        <Container>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/dashboard' component={Dashboard} />
+          </Switch>
+        </Container>
       </Router>
     </div>
   );
