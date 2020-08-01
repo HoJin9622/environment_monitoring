@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../routes/Home';
 import Dashboard from '../routes/Dashboard';
-import Drawer from './Drawer';
-import { makeStyles } from '@material-ui/styles';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,18 +16,10 @@ const Container = styled.div`
   padding: 0 3rem;
 `;
 
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-  },
-});
-
 function App() {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
+    <div>
       <Router>
-        <Drawer />
         <Container>
           <Switch>
             <Route exact path='/' component={Home} />

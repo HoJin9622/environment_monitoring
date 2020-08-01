@@ -1,5 +1,4 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 import CanvasJSReact from './canvasjs.react';
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
@@ -28,9 +27,5 @@ export default ({ temp }) => {
     ],
   };
 
-  return (
-    <Paper style={{ width: '100%' }} elevation={10}>
-      <CanvasJSChart options={tempOptions} />
-    </Paper>
-  );
+  return <CanvasJSChart options={tempOptions} />;
 };

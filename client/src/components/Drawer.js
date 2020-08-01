@@ -1,25 +1,8 @@
 import React from 'react';
-import {
-  Drawer as MUIDrawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
-import HomeIcon from '@material-ui/icons/Home';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import { withRouter } from 'react-router-dom';
-
-const useStyles = makeStyles({
-  drawer: {
-    width: '155px',
-  },
-});
 
 const Drawer = (props) => {
   const { history } = props;
-  const classes = useStyles();
   const itemList = [
     { text: '홈', icon: <HomeIcon />, onClick: () => history.push('/') },
     {
